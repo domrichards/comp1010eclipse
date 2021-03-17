@@ -10,7 +10,7 @@ public class Stage2 {
 	 */
 	public int sum(int[] data) {
 		if (data == null) {
-            return 0;
+            return 1;
             
         }
         

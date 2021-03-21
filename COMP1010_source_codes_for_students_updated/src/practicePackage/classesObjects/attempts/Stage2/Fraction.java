@@ -24,6 +24,12 @@ public class Fraction {
 	 * @param d: value for den (if d is 0, den should become 1)
 	 */
 	public Fraction(int n, int d) {
+	this.num=n;
+	this.den=d;
+	
+	if(d == 0) {
+		this.den=1;
+	}
 	}
 
 	/**

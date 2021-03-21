@@ -26,6 +26,23 @@ public class Time {
 	 * minute should become 59 if m is more than 59
 	 */
 	public Time(int h, int m) {
+	this.hour=h;
+	this.minute=m;
+	
+	if(h < 0) {
+		this.hour=0;
+	}
+	if(h > 23) {
+		this.hour=23;
+	}
+	
+	if(m < 0) {
+		this.minute=0;
+	}
+	if(m > 59) {
+		this.minute=59;
+	}
+	
 	}
 
 	/**
@@ -47,8 +64,17 @@ public class Time {
 	 * 			 0 if calling object and parameter object are the same
 	 */
 	public int compareTo(Time other) {
+	/*	if(this.Time > other.Time) {
+			return 1;
+		}
+		if(this.Time < other.Time) {
+			return -1;
+		}
+		return 0;
+		*/
 		return 0;
 	}
+	
 	
 	/**
 	 * EXTRA... no test provided for this method

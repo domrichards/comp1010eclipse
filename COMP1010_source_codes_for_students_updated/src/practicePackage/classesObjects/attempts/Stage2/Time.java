@@ -64,17 +64,14 @@ public class Time {
 	 * 			 0 if calling object and parameter object are the same
 	 */
 	public int compareTo(Time other) {
-	/*	if(this.Time > other.Time) {
+		if(this.hour > other.hour || (this.hour == other.hour && this.minute > other.minute)) {
 			return 1;
 		}
-		if(this.Time < other.Time) {
+		if(this.hour < other.hour || (this.hour == other.hour && this.minute < other.minute)) {
 			return -1;
 		}
 		return 0;
-		*/
-		return 0;
 	}
-	
 	
 	/**
 	 * EXTRA... no test provided for this method

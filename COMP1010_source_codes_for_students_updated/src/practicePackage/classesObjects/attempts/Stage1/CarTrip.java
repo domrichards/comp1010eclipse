@@ -32,7 +32,7 @@ public class CarTrip {
 	 * For example, if distance = 2.5, time = 1.2, return "2.5 kms travelled in 1.2 hours" 
 	 */
 	public String toString() {
-		return "this.distance" + "kms travelled in" + "this.time" + "hours"; 
+		return distance + " kms travelled in " + time + " hours";
 		
 	}
 	

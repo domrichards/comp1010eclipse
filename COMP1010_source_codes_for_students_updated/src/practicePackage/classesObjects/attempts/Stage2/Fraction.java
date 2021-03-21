@@ -38,6 +38,9 @@ public class Fraction {
 	 * false otherwise (examples: 7/-3 or -12/25)
 	 */
 	public boolean isPositive() {
+		if((num > 0 && den > 0) || (num < 0 && den < 0)) {
+			return true;
+		}
 		return false;
 	}
 

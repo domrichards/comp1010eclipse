@@ -51,7 +51,7 @@ public class Time {
 	 * if hour = 16, minute = 9, return "16:09"
 	 * if hour = 17, minute = 25, return "17:25"
 	 * HINT: use string concatenation:  "0" (String) + 5 (int) gives "05" (String)
-	 * HINT 2: you can use DecimalFormat class
+	 * HINT 2: you can use DecimalFormat class.
 	 */
 	public String toString() {
 		return null;

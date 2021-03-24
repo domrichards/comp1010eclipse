@@ -26,6 +26,23 @@ public class Time {
 	 * minute should become 59 if m is more than 59
 	 */
 	public Time(int h, int m) {
+	this.hour=h;
+	this.minute=m;
+	
+	if(h < 0) {
+		this.hour=0;
+	}
+	if(h > 23) {
+		this.hour=23;
+	}
+	
+	if(m < 0) {
+		this.minute=0;
+	}
+	if(m > 59) {
+		this.minute=59;
+	}
+	
 	}
 
 	/**
@@ -34,7 +51,7 @@ public class Time {
 	 * if hour = 16, minute = 9, return "16:09"
 	 * if hour = 17, minute = 25, return "17:25"
 	 * HINT: use string concatenation:  "0" (String) + 5 (int) gives "05" (String)
-	 * HINT 2: you can use DecimalFormat class
+	 * HINT 2: you can use DecimalFormat class.
 	 */
 	public String toString() {
 		return null;
@@ -47,6 +64,12 @@ public class Time {
 	 * 			 0 if calling object and parameter object are the same
 	 */
 	public int compareTo(Time other) {
+		if(this.hour > other.hour || (this.hour == other.hour && this.minute > other.minute)) {
+			return 1;
+		}
+		if(this.hour < other.hour || (this.hour == other.hour && this.minute < other.minute)) {
+			return -1;
+		}
 		return 0;
 	}
 	

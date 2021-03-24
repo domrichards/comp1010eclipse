@@ -12,11 +12,19 @@ public class CarTrip {
 	 * assign the higher of 0 and t into time
 	 */
 	public CarTrip(double d, double t) {
-		//to be completed
+		this.distance=d;
+		this.time=t;
+	
+	if(d < 0) {
+		this.distance=0;
+	}
+	if(t < 0) {
+		this.time=0;
+	}
 	}
 	
 	public double averageSpeed() {
-		return 0; //to be completed
+		return this.distance/this.time;
 	}
 	
 	/**
@@ -24,7 +32,8 @@ public class CarTrip {
 	 * For example, if distance = 2.5, time = 1.2, return "2.5 kms travelled in 1.2 hours" 
 	 */
 	public String toString() {
-		return ""; //to be completed
+		return distance + " kms travelled in " + time + " hours";
+		
 	}
 	
 	/**
@@ -35,6 +44,12 @@ public class CarTrip {
 	 * 0 if calling object distance is equal to parameter object distance
 	 */
 	public int compareTo(CarTrip other) {
-		return 0; //to be completed
+		if(this.distance > other.distance) {
+			return 1;
+		}
+		if(this.distance < other.distance) {
+			return -1;
+		}
+		return 0;
 	}
 }

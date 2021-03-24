@@ -24,6 +24,12 @@ public class Fraction {
 	 * @param d: value for den (if d is 0, den should become 1)
 	 */
 	public Fraction(int n, int d) {
+	this.num=n;
+	this.den=d;
+	
+	if(d == 0) {
+		this.den=1;
+	}
 	}
 
 	/**
@@ -32,6 +38,9 @@ public class Fraction {
 	 * false otherwise (examples: 7/-3 or -12/25)
 	 */
 	public boolean isPositive() {
+		if((num > 0 && den > 0) || (num < 0 && den < 0)) {
+			return true;
+		}
 		return false;
 	}
 

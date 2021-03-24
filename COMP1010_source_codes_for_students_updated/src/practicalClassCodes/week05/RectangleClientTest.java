@@ -78,6 +78,7 @@ class RectangleClientTest {
 			drr[i] = new Rectangle(i,i); 
 		}
 		
+		
 
 		assertEquals(drr.length, RectangleClient.countSquares(drr)); //all items are squares
 	}

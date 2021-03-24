@@ -20,9 +20,33 @@ public class RectangleClient {
 		return total;
 	}
 	
+	public static boolean allSquares(Rectangle[] data) {
+		for(int i=0; i<data.length; i++) {
+			if(data != null && data[i].isSquare()) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public static void main(String[] args) {
+	
+		Rectangle[] data = new Rectangle[5];
+		
+		for(int i=0; i<data.length; i++) {
+			data[i] = new Rectangle(i+1,i+1);
+			System.out.println(data[i]);
+		}
+		
+		
+		
+		
+		//System.out.println(data[0]);
+		
+		
+		
 		// TODO Auto-generated method stub
-		Rectangle rect = new Rectangle(-5, 8);
+		/*Rectangle rect = new Rectangle(-5, 8);
 
 		System.out.println(rect.area());
 
@@ -34,7 +58,7 @@ public class RectangleClient {
 
 		System.out.println(rect);
 		System.out.println(other);
-		System.out.println(third);
+		System.out.println(third);*/
 	}
 
 }

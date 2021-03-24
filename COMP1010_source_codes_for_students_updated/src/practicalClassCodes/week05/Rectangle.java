@@ -21,7 +21,7 @@ public class Rectangle {
 		height = 0;
 
 	}
-	
+	//instance methods
 	public int area() {
 		return width * height;
 	}

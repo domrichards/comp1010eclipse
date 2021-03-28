@@ -12,6 +12,22 @@ public class TrainingStats {
 	 * @param decisions
 	 */
 	public TrainingStats(int[] rate, int[] decisions) {
+		this.heartRate=rate;
+		this.decisionMaking=decisions;
+		
+		int[] rateCopy = new int[100];
+		for(int i=0; i<rate.length; i++) {
+			rateCopy[i]=rate[i];
+		}
+		
+		int[] decisionsCopy = new int[100];
+		for(int i=0; i<decisions.length; i++) {
+			if(decisions[i] < 0 || decisions[i] > 100) {
+				decisions[i]=null;
+			}
+			decisionsCopy[i]=decisions[i];
+		}
+		
 	}
 	
 	/**

@@ -15,15 +15,15 @@ public class TrainingStats {
 		this.heartRate=rate;
 		this.decisionMaking=decisions;
 		
-		int[] rateCopy = new int[100];
+		int[] rateCopy = new int[rate.length];
 		for(int i=0; i<rate.length; i++) {
 			rateCopy[i]=rate[i];
 		}
 		
-		int[] decisionsCopy = new int[100];
+		int[] decisionsCopy = new int[decisions.length];
 		for(int i=0; i<decisions.length; i++) {
 			if(decisions[i] < 0 || decisions[i] > 100) {
-				decisions[i]=null;
+				decisions[i]=(int) null;
 			}
 			decisionsCopy[i]=decisions[i];
 		}

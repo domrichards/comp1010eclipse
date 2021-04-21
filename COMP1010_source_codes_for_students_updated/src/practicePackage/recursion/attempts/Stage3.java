@@ -27,13 +27,7 @@ public class Stage3 {
 	 * return false if Sting is null
 	 */
 	public boolean isPalindrome(String str) {
-		  if(str == null) {
-		         return false;
-		     }
-		     if(str.length() < 1) {
-		         return true;
-		     }
-				return true;
+		return false; //to be completed
 	}
 
 	/**

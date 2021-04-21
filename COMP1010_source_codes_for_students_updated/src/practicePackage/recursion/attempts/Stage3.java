@@ -8,7 +8,14 @@ public class Stage3 {
 	 * return null if string is null
 	 */
 	public String reverse(String str) {
-		return null; //to be completed
+		 if(str == null || str.length() < 1) {
+	         return str;
+	     }
+			
+	     char first = str.charAt(0);
+	     String remaining = str.substring(1);
+			
+	     return reverse(remaining) + first; 
 	}
 
 	/**
@@ -20,7 +27,13 @@ public class Stage3 {
 	 * return false if Sting is null
 	 */
 	public boolean isPalindrome(String str) {
-		return false; //to be completed
+		  if(str == null) {
+		         return false;
+		     }
+		     if(str.length() < 1) {
+		         return true;
+		     }
+				return true;
 	}
 
 	/**

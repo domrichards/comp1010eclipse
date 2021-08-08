@@ -11,7 +11,16 @@ public class Stage2 {
 	 * @return true if exactly two out of the three values are the same, false otherwise
 	 */
 	public boolean twoOutOfThree(int a, int b, int c) {
-		return false; //to be completed
+		if(a == b && a!=c) {
+			return true;
+		}
+		if(b == c && b!=a) {
+			return true;
+		}
+		if(a == c && a!=b) {
+			return true;
+		}	
+		return false;
 	}
 
 	/**
@@ -25,7 +34,11 @@ public class Stage2 {
 	 * lastDigit(8) = 8
 	 */
 	public int lastDigit(int n) {
-		return 0; //to be completed
+		if(n<0) {
+			n*=-1;
+		}
+		
+		return n%10;
 	}
 
 	/**
@@ -38,7 +51,7 @@ public class Stage2 {
 	 * average(5, 8) = 6.5
 	 */
 	public double average(int a, int b) {
-		return 0; //to be completed
+		return()
 	}
 
 	/**
@@ -49,7 +62,10 @@ public class Stage2 {
 	 * For example, absolute(-6) = 6, absolute(9) = 9
 	 */
 	public int absolute(int n) {
-		return 0; //to be completed
+		if(n < 0) {
+			return(n*=-1);
+		}
+		return n;
 	}
 
 	/**
@@ -65,7 +81,13 @@ public class Stage2 {
 	 * in all other cases, return val
 	 */
 	public int constrain(int val, int low, int high) {
-		return 0; //to be completed
+		if(val < low) {
+			return low;
+		}
+		if( val > high) {
+			return high;
+		}
+		return val;
 	}
 
 	/**
@@ -80,7 +102,17 @@ public class Stage2 {
 	 * 
 	 */
 	public int getQuadrant(int x, int y) {
-		return 0; //to be completed
+		if(x >= 0 && y >= 0) {
+			return 1;
+		}
+		if(x < 0 && y >= 0) {
+			return 2;
+		}
+		if(x < 0 && y < 0) {
+			return 3;
+		} 
+		return 4;
+		
 	}
 
 	/**
@@ -89,7 +121,7 @@ public class Stage2 {
 	 * @return val rounded to the nearest integer.
 	 */
 	public int roundOff(double val) {
-		return 0; //to be completed
+		return 0;
 	}
 
 	/**

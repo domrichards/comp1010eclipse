@@ -16,11 +16,11 @@ public class Stage1 {
 	 * @return the cube of n
 	 */
 	public int cube(int n) {
-		return 0; //to be completed
+		return n*n*n;
 	}
 	
 	public double average(double a, double b) {
-		return 0; //to be completed
+		return ((a+b)/2);
 	}
 	
 	/**
@@ -29,7 +29,7 @@ public class Stage1 {
 	 * @return the last digit of the number n
 	 */
 	public int lastDigit(int n) {
-		return 0; //to be completed
+		return (n%10);
 	}
 
 	/**
@@ -38,7 +38,10 @@ public class Stage1 {
 	 * @return true if n is positive (more than 0), false otherwise
 	 */
 	public boolean isPositive(int n) {
-		return false; //to be completed
+		if(n>0) {
+			return true;
+		}
+		return false;
 	}	
 
 	/**
@@ -47,7 +50,10 @@ public class Stage1 {
 	 * @return true if n is even (divisible by 2), false otherwise
 	 */
 	public boolean isEven(int n) {
-		return false; //to be completed
+		if(n%2 == 0) {
+			return true;
+		}
+		return false;
 	}
 
 	/**
@@ -77,7 +83,10 @@ public class Stage1 {
 	 * @return the value that is even
 	 */
 	public int evenOne(int a, int b) {
-		return 0; //to be completed
+		if(a%2 == 0) {
+			return a;
+		}
+		return b; 
 	}
 
 	/**
@@ -88,7 +97,10 @@ public class Stage1 {
 	 * @return true if n is in the range [low...high], false otherwise
 	 */
 	public boolean isInRange(int n, int low, int high) {
-		return false; //to be completed
+		if(n>=low && n<=high) {
+			return true;
+		}
+		return false; 
 	}
 
 	/**
@@ -99,6 +111,13 @@ public class Stage1 {
 	 * @return the highest of the three integers passed
 	 */
 	public int highest(int a, int b, int c) {
-		return 0; //to be completed
+		if(a>=b && a>=c) {
+			return a;
+		}
+		if(b>=a && b>=c) {
+			return b;
+		}
+		
+		return c;
 	}
 }

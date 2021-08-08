@@ -51,7 +51,7 @@ public class Stage2 {
 	 * average(5, 8) = 6.5
 	 */
 	public double average(int a, int b) {
-		return()
+		return(a+b)/2.0;
 	}
 
 	/**

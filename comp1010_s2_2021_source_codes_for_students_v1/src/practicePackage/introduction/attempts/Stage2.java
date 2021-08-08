@@ -132,7 +132,7 @@ public class Stage2 {
 	 * For example, floor(4.2) = 4, floor(7.0) = 7, floor(5.9999) = 5
 	 */
 	public int floor(double val) {
-		return 0; //to be completed
+		return (int) val;
 	}
 
 	/**
@@ -145,7 +145,11 @@ public class Stage2 {
 	 * ceiling(5.9999) = 6, ceiling(-3.7) = -3
 	 */
 	public int ceiling(double val) {
-		return 0; //to be completed
+		int floor = (int)val;
+		if(val > floor) {
+			return floor + 1;
+		}
+		return (int) val;
 	}
 	
 	/**
@@ -154,7 +158,7 @@ public class Stage2 {
 	 * @return the last character in the String
 	 */
 	public char getLastChar(String str) {
-		return 'a'; //'a' used as default value (to be completed)
+		return str.charAt(str.length()-1);
 	}
 	
 	/**
@@ -163,7 +167,7 @@ public class Stage2 {
 	 * @return the String with the first character removed
 	 */
 	public String getWithoutFirstChar(String str) {
-		return ""; //to be completed
+		return str.substring(1);
 	}
 	
 	/**
@@ -172,6 +176,6 @@ public class Stage2 {
 	 * @return the String with the last character removed
 	 */
 	public String getWithoutLastChar(String str) {
-		return ""; //to be completed
+		return str.substring(0, str.length()-1);
 	}
 }

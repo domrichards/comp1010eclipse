@@ -7,7 +7,7 @@ public class Stage1 {
 	 * @return square of n
 	 */
 	public int square(int n) {
-		return 0; //to be completed
+		return n*n;
 	}
 
 	/**

@@ -31,9 +31,9 @@ public class OrderingLogic {
 		if (size > 15) {
 			size = 15;
 		}
-		data = new int [size];
+		data = new int [size]; //create new array with "size" items
 		for(int i=0; i<data.length; i++) {
-			data[i] = 1 + (int)(Math.random()*90);
+			data[i] = 1 + (int)(Math.random()*90); //randomize the array to be between 1 and 90
 		}
 		/*
 		 * read javadoc method comment carefully. applet will start working.
@@ -53,7 +53,7 @@ public class OrderingLogic {
 	 * false otherwise
 	 */
 	public boolean isValidIndex(int idx) {
-		if(idx < 0 || idx >= data.length || data == null) {
+		if(idx < 0 || idx >= data.length || data == null) { //check if index idx is invalid
 			return false;
 		}
 		return true;
@@ -66,10 +66,10 @@ public class OrderingLogic {
 	 * @param idx
 	 */
 	public void remove(int idx) {
-		int[] left = new int[data.length-1];
+		int[] left = new int[data.length-1]; //temp array made for the elements of data to be copied into
 		if(idx < 0 || idx >= data.length || data == null) {
 			return;
-		} else {
+		} else { // for all items in the array data, copy into temp array, unless the item at idx should be removed 
 		for(int i=0, j=0; i<data.length; i++) {
 			if(i!=idx) {
 				left[j]=data[i];
@@ -77,7 +77,7 @@ public class OrderingLogic {
 			}
 		}
 		}
-		data = left;
+		data = left; //update data to the new array without idx
 	
 	}
 
@@ -88,12 +88,12 @@ public class OrderingLogic {
 	public boolean isSorted() {
 		boolean ascending = true;
 		boolean descending = true;
-		for(int i=0; i<data.length-1; i++) {
-			if(data[i] < data[i+1]) {
-				descending = false;
+		for(int i=0; i<data.length-1; i++) { 
+			if(data[i] < data[i+1]) { // check if the element i > i+1
+				descending = false; 
 			}
-			if(data[i] > data[i+1]) {
-				ascending = false;
+			if(data[i] > data[i+1]) { // check if the element i > i+1
+				ascending = false; 
 			}
 		}
 		if(ascending == false && descending == false) {

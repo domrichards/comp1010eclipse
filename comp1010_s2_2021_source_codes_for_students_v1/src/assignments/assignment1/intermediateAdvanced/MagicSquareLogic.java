@@ -32,21 +32,7 @@ public class MagicSquareLogic {
 	 * our tests have a check for that. if the test passes, you are ok. 
 	 */
 	public MagicSquareLogic(int size) {
-		if( size < 3) {
-			size = 3;
-		}
-		if( size > 7) {
-			size = 7;
-		}
-		n = size;
-		data = new int[size][size];
-		for(int i = 0; i<data.length; i++) {
-			for(int j = 0; j<data.length; j++) {
-				data[i][j] = i*9 + j + 1;
-			}
-		}
 	}
-	
 
 	/**
 	 * 
@@ -57,9 +43,17 @@ public class MagicSquareLogic {
 	 * the item, data[i][k], if accessed, would not generate ArrayIndexOutOfBoundsException
 	 */
 	public boolean isValid(int i, int k) {
-		return false;
+		if(i < 0 || k < 0) { // return false if i or k are less than zero
+			return false;
+		}
+		if(i >= data.length || k >= data.length) { // return false if i or k are greater than the arrays length
+			return false;
+		}
+		if(data == null) { // return false if the array's data is null
+			return false;
+		}
+		return true;
 	}
-	
 	/**
 	 * swap 
 	 * item at index k1 inside sub-array at index i1,
@@ -69,6 +63,13 @@ public class MagicSquareLogic {
 	 * and false otherwise
 	 */
 	public boolean swap(int i1, int k1, int i2, int k2) {
+		int temp; 												// create a temporary int for values in data to be stored
+		if(isValid(i1,k1) == true && isValid(i2,k2) == true) { 		// check if both indices are valid
+			temp = data[i1][k1];
+			data[i1][k1] = data[i2][k2];
+			data[i2][k2] = temp;
+			return true;											// swap both items and return true
+		}
 		return false;
 	}
 
@@ -78,7 +79,7 @@ public class MagicSquareLogic {
 	 * false otherwise
 	 */
 	public boolean completeSet() {
-		return false;
+		return true;
 	}
 
 	/**

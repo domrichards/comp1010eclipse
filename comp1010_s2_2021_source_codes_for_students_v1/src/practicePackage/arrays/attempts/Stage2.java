@@ -9,7 +9,14 @@ public class Stage2 {
 	 * return 0 if the array is null
 	 */
 	public int sum(int[] data) {
-		return 0; //to be completed
+		if(data == null) {
+			return 0;
+		}
+		int sum = 0;
+		for(int i=0; i<data.length; i++) {
+			sum+= data[i];
+		}
+		return sum;
 	}
 
 	/**
@@ -19,8 +26,17 @@ public class Stage2 {
 	 * return 0 if the array is null
 	 */
 	public int sumEven(int[] data) {
-		return 0; //to be completed
-	} 
+		if(data == null) {
+			return 0;
+		}
+		int sum = 0;
+		for(int i=0; i<data.length; i++) {
+			if(data[i]%2 == 0)
+			sum+= data[i];
+		}
+		return sum;
+	}
+
 
 	/**
 	 * 
@@ -29,8 +45,16 @@ public class Stage2 {
 	 * return 0 if the array is null
 	 */
 	public int sumOdd(int[] data) {
-		return 0; //to be completed
-	} 
+		if(data == null) {
+			return 0;
+		}
+		int sum = 0;
+		for(int i=0; i<data.length; i++) {
+			if(data[i]%2 != 0)
+			sum+= data[i];
+		}
+		return sum;
+	}
 
 	/**
 	 * 
@@ -39,9 +63,16 @@ public class Stage2 {
 	 * return 0 if the array is null
 	 */
 	public int sumPositives(int[] data) {
-		return 0; //to be completed
-	} 	
-
+		if(data == null) {
+			return 0;
+		}
+		int sum = 0;
+		for(int i=0; i<data.length; i++) {
+			if(data[i] >= 0)
+			sum+= data[i];
+		}
+		return sum;
+	}
 	/**
 	 * 
 	 * @param data
@@ -49,7 +80,15 @@ public class Stage2 {
 	 * return 0 if the array is null
 	 */
 	public int sumNegatives(int[] data) {
-		return 0; //to be completed
+		if(data == null) {
+			return 0;
+		}
+		int sum = 0;
+		for(int i=0; i<data.length; i++) {
+			if(data[i] < 0)
+			sum+= data[i];
+		}
+		return sum;
 	}
 
 	/**
@@ -60,9 +99,19 @@ public class Stage2 {
 	 * return 0 if the array is null
 	 */
 	public int sumMultiples(int[] data, int n) {
-		return 0; //to be completed
+		if(data == null) {
+			return 0;
+		}
+		
+		int sum = 0;
+		for(int i=0; i<data.length; i++) {
+			if (data[i] % n == 0) {
+				sum+= data[i];
+			}
+		}
+		
+		return sum;
 	}
-
 	/**
 	 * 
 	 * @param data
@@ -72,8 +121,17 @@ public class Stage2 {
 	 * return 0 if the array is null
 	 */
 	public int sumFactors(int[] data, int n) {
-		return 0; //to be completed
-	}
+		if(data == null) {
+			return 0;
+		}
+		int sum = 0;
+		for(int i=0; i<data.length; i++) {
+			if(n%data[i] == 0) {
+				sum+=data[i];
+			}
+		}
+		return sum;
+	} 	
 
 	/**
 	 * 
@@ -83,9 +141,17 @@ public class Stage2 {
 	 * @return sum of all items of the array passed that lie in the number range [low...high]
 	 */
 	public int sumInRange(int[] data, int low, int high) {
-		return 0; //to be completed
+		if(data == null) {
+			return 0;
+		}
+		int sum = 0;
+		for(int i=0; i<data.length; i++) {
+			if(data[i] >= low && data[i] <= high) {
+				sum+=data[i];
+			}
+		}
+		return sum;
 	} 	
-
 	/**
 	 * 
 	 * @param data
@@ -94,8 +160,17 @@ public class Stage2 {
 	 * @return sum of all items of the array passed that lie OUTSIDE the number range [low...high]
 	 */
 	public int sumNotInRange(int[] data, int low, int high) {
-		return 0; //to be completed
-	} 	
+		if(data == null) {
+			return 0;
+		}
+		int sum = 0;
+		for(int i=0; i<data.length; i++) {
+			if(data[i] < low || data[i] > high) {
+				sum+=data[i];
+			}
+		}
+		return sum;
+	} 
 
 	/**
 	 * 
@@ -103,8 +178,17 @@ public class Stage2 {
 	 * @return the sum of all items at even indices of the array passed
 	 */
 	public int sumEvenIndexedItems(int[] data) {
-		return 0; //to be completed
-	}
+		if(data == null) {
+			return 0;
+		}
+		int sum = 0;
+		for(int i=0; i<data.length; i++) {
+			if(i % 2 == 0) {
+				sum+=data[i];
+			}
+		}
+		return sum;
+	} 
 
 	/**
 	 * 
@@ -112,8 +196,17 @@ public class Stage2 {
 	 * @return the sum of all items at odd indices of the array passed
 	 */
 	public int sumOddIndexedItems(int[] data) {
-		return 0; //to be completed
-	}
+		if(data == null) {
+			return 0;
+		}
+		int sum = 0;
+		for(int i=0; i<data.length; i++) {
+			if(i % 2 != 0) {
+				sum+=data[i];
+			}
+		}
+		return sum;
+	} 
 
 	/**
 	 * 
@@ -121,8 +214,16 @@ public class Stage2 {
 	 * reset any negative value(s) in the array passed to zero.
 	 */
 	public void resetNegatives(int[] data) {
-		//to be completed
-	}
+		if(data == null) {
+			return;
+		}
+		for(int i=0; i<data.length; i++) {
+			if(data[i] < 0) {
+				data[i] = 0;
+			}
+		}
+	} 
+
 
 	/**
 	 * 
@@ -131,8 +232,16 @@ public class Stage2 {
 	 * for example, if data[2] is -5, it should become 5.
 	 */
 	public void makeAbsolute(int[] data) {
-		//to be completed
-	}
+		if(data == null) {
+			return;
+		}
+		for(int i=0; i<data.length; i++) {
+			if(data[i] < 0) {
+				data[i] = data[i]*-1;
+			}
+		}
+	} 
+
 
 	/**
 	 * 
@@ -140,8 +249,13 @@ public class Stage2 {
 	 * update each item of the array to the square of itself.
 	 */
 	public void squareUp(int[] data) {
-		//to be completed
-	}
+		if(data == null) {
+			return;
+		}
+		for(int i=0; i<data.length; i++) {
+			data[i] = data[i] * data[i];
+		}
+	} 
 
 	/**
 	 * 
@@ -150,8 +264,17 @@ public class Stage2 {
 	 * return 0 if the array is null.
 	 */
 	public int countEven(int[] data) {
-		return 0; //to be completed
-	} 
+		if(data == null) {
+			return 0;
+		}
+		int sum = 0;
+		for(int i=0; i<data.length; i++) {
+			if(data[i]%2 == 0) {
+			sum+=1;	
+			}
+		}
+		return sum;
+	}
 
 	/**
 	 * 
@@ -160,8 +283,17 @@ public class Stage2 {
 	 * return 0 if the array is null.
 	 */
 	public int countOdd(int[] data) {
-		return 0; //to be completed
-	} 
+		if(data == null) {
+			return 0;
+		}
+		int sum = 0;
+		for(int i=0; i<data.length; i++) {
+			if(data[i]%2 != 0) {
+			sum+=1;	
+			}
+		}
+		return sum;
+	}
 
 	/**
 	 * 
@@ -170,8 +302,16 @@ public class Stage2 {
 	 * return 0 if the array is null.
 	 */
 	public int countPositives(int[] data) {
-		return 0; //to be completed
-	} 	
+		if(data == null) {
+			return 0;
+		}
+		int count = 0;
+		for(int i=0; i<data.length; i++) {
+			if(data[i] > 0)
+			count++;
+		}
+		return count;
+	}	
 
 	/**
 	 * 
@@ -180,9 +320,16 @@ public class Stage2 {
 	 * return 0 if the array is null.
 	 */
 	public int countNegatives(int[] data) {
-		return 0; //to be completed
-	} 	
-
+		if(data == null) {
+			return 0;
+		}
+		int count = 0;
+		for(int i=0; i<data.length; i++) {
+			if(data[i] < 0)
+			count++;
+		}
+		return count;
+	}	
 	/**
 	 * 
 	 * @param data
@@ -191,7 +338,15 @@ public class Stage2 {
 	 * return 0 if the array is null.
 	 */
 	public int countMultiples(int[] data, int n) {
-		return 0; //to be completed
+		if(data == null) {
+			return 0;
+		}
+		int count = 0;
+		for(int i=0; i<data.length; i++) {
+			if(data[i] %n == 0)
+			count++;
+		}
+		return count;
 	}
 
 	/**
@@ -202,7 +357,15 @@ public class Stage2 {
 	 * return 0 if the array is null.
 	 */
 	public int countFactors(int[] data, int n) {
-		return 0; //to be completed
+		if(data == null) {
+			return 0;
+		}
+		int count = 0;
+		for(int i=0; i<data.length; i++) {
+			if(n%data[i] == 0)
+			count++;
+		}
+		return count;
 	}
 
 	/**
@@ -214,8 +377,16 @@ public class Stage2 {
 	 * return 0 if the array is null.
 	 */
 	public int countInRange(int[] data, int low, int high) {
-		return 0; //to be completed
-	} 	
+		if(data == null) {
+			return 0;
+		}
+		int count = 0;
+		for(int i=0; i<data.length; i++) {
+			if(data[i] >= low && data[i] <= high)
+			count++;
+		}
+		return count;
+	}	
 
 	/**
 	 * 
@@ -226,8 +397,16 @@ public class Stage2 {
 	 * return 0 if the array is null.
 	 */
 	public int countNotInRange(int[] data, int low, int high) {
-		return 0; //to be completed
-	} 	
+		if(data == null) {
+			return 0;
+		}
+		int count = 0;
+		for(int i=0; i<data.length; i++) {
+			if(data[i] < low || data[i] > high)
+			count++;
+		}
+		return count;
+	}	 	
 
 	/**
 	 * 
@@ -237,7 +416,15 @@ public class Stage2 {
 	 * return 0 if array is null.
 	 */
 	public int countOccurrences(int[] data, int target) {
-		return 0; //to be completed
+		if(data == null) {
+			return 0;
+		}
+		int count = 0;
+		for(int i=0; i<data.length; i++) {
+			if(data[i] == target)
+			count++;
+		}
+		return count;
 	}
 
 	/**
@@ -248,7 +435,16 @@ public class Stage2 {
 	 * HINT: use countOccurrences(int[], int)
 	 */
 	public int countUnique(int[] data) {
-		return 0; //to be completed
+		if(data == null) {
+			return 0;
+		}
+		int count = 0;
+		for(int i=0; i<data.length; i++) {
+			if(countOccurrences(data, data[i]) == 1) {
+				count++;
+			}
+		}
+		return count;
 	}
 
 	/**
@@ -259,7 +455,15 @@ public class Stage2 {
 	 * return false if array is null.
 	 */
 	public boolean contains(int[] data, int target) {
-		return false; //to be completed
+		if(data==null) {
+			return false;
+		}
+		for(int i=0; i<data.length; i++) {
+			if(data[i] == target) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/**
@@ -270,8 +474,17 @@ public class Stage2 {
 	 * return -1 if array is null or target doesn't exist in the array.
 	 */
 	public int indexOf(int[] data, int target) {
-		return 0; //to be completed
+		if(data==null) {
+			return -1;
+		}
+		for(int i=0; i<data.length;i++) {
+            if(data[i] == target) {
+            	return i;
+            } 
+   		}
+		return -1;
 	}
+	
 
 	/**
 	 * 
@@ -281,8 +494,17 @@ public class Stage2 {
 	 * return -1 if array is null or target doesn't exist in the array.
 	 */
 	public int lastIndexOf(int[] data, int target) {
-		return 0; //to be completed
+		if(data==null) {
+			return -1;
+		}
+		for(int i=data.length-1; i>=0; i--) {
+            if(data[i] == target) {
+            	return i;
+            } 
+   		}
+		return -1;
 	}
+	
 
 	/**
 	 * 
@@ -293,8 +515,20 @@ public class Stage2 {
 	 * return false if array is null or target doesn't exist in the array starting at index startIndex.
 	 */
 	public boolean containsFromIndex(int[] data, int target, int startIndex) {
-		return false; //to be completed
-	}
+		if(data==null) {
+            return false;
+        } 
+		if(startIndex<0 || startIndex>=data.length) {
+            return false;
+        }
+        
+        for(int i=startIndex; i<data.length; i++) {
+            if(data[i] == target) {
+            	return true;
+            }
+        }
+        return false;
+    }
 
 	/**
 	 * 
@@ -305,9 +539,20 @@ public class Stage2 {
 	 * return false if array is null or endIndex is invalid or target doesn't exist in the array up to index endIndex.
 	 */
 	public boolean containsUptoIndex(int[] data, int target, int endIndex) {
-		return false; //to be completed
-	}
-
+		if(data==null) {
+            return false;
+        } 
+		if(endIndex<0 || endIndex>=data.length) {
+            return false;
+        }
+        
+        for(int i=endIndex; i<data.length; i++) {
+            if(data[i] == target) {
+            	return true;
+            }
+        }
+        return false;
+    }
 	/**
 	 * 
 	 * @param data
@@ -319,8 +564,25 @@ public class Stage2 {
 
 	 */
 	public boolean containsBetweenIndices(int[] data, int target, int startIndex, int endIndex) {
-		return false; //to be completed
-	}
+		if(data==null) {
+            return false;
+        } 
+        
+		if(endIndex<0 || endIndex>=data.length) {
+            return false;
+        }
+		
+		if(startIndex<0 || startIndex>=data.length) {
+            return false;
+        }
+        
+        for(int i=startIndex; i<endIndex; i++) {
+            if(data[i] == target) {
+            	return true;
+            }
+        }
+        return false;
+    }
 
 	/**
 	 * 
@@ -330,8 +592,21 @@ public class Stage2 {
 	 * return 0 if array is null.
 	 */
 	public int sumFromIndex(int[] data, int startIndex) {
-		return 0; //to be completed
+		if(data==null) {
+            return 0;
+        } 
+		if(startIndex<0 || startIndex>=data.length) {
+            return 0;
+        }
+		
+		int sum = 0;
+		for(int i=startIndex; i<data.length; i++) {
+			sum+=data[i]; 
+		}
+		return sum;
 	}
+	
+
 
 	/**
 	 * 

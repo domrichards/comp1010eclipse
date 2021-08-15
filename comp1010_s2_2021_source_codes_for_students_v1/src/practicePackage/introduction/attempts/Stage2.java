@@ -121,7 +121,7 @@ public class Stage2 {
 	 * @return val rounded to the nearest integer.
 	 */
 	public int roundOff(double val) {
-		return 0;
+		return (int) (val + 0.5);
 	}
 
 	/**

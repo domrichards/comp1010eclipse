@@ -1,6 +1,6 @@
-//NAME
-//STUDENT ID
-//[] I declare that I haven't seen another person's code, and the submission is entirely your work.
+//NAME Dominic Richards
+//STUDENT ID 45445532
+//[x] I declare that I haven't seen another person's code, and the submission is entirely your work.
 //(put an x inside the square brackets to provide declaration)
 
 //Example:
@@ -25,6 +25,16 @@ public class OrderingLogic {
 	 * (inclusive on both sides).
 	 */
 	public OrderingLogic(int size) {
+		if (size <= 0) {
+			size = 1;
+		}
+		if (size > 15) {
+			size = 15;
+		}
+		data = new int [size];
+		for(int i=0; i<data.length; i++) {
+			data[i] = 1 + (int)(Math.random()*90);
+		}
 		/*
 		 * read javadoc method comment carefully. applet will start working.
 		 * once you complete this successfully. 
@@ -43,7 +53,10 @@ public class OrderingLogic {
 	 * false otherwise
 	 */
 	public boolean isValidIndex(int idx) {
-		return false;
+		if(idx < 0 || idx >= data.length || data == null) {
+			return false;
+		}
+		return true;
 	}
 
 	/**
@@ -53,6 +66,19 @@ public class OrderingLogic {
 	 * @param idx
 	 */
 	public void remove(int idx) {
+		int[] left = new int[data.length-1];
+		if(idx < 0 || idx >= data.length || data == null) {
+			return;
+		} else {
+		for(int i=0, j=0; i<data.length; i++) {
+			if(i!=idx) {
+				left[j]=data[i];
+				j++;
+			}
+		}
+		}
+		data = left;
+	
 	}
 
 	/**
@@ -60,6 +86,20 @@ public class OrderingLogic {
 	 * @return true if the array is sorted in ascending OR descending order, false otherwise
 	 */
 	public boolean isSorted() {
-		return false;
+		boolean ascending = true;
+		boolean descending = true;
+		for(int i=0; i<data.length-1; i++) {
+			if(data[i] < data[i+1]) {
+				descending = false;
+			}
+			if(data[i] > data[i+1]) {
+				ascending = false;
+			}
+		}
+		if(ascending == false && descending == false) {
+			return false;
+		} else {
+			return true;
+		}
 	}
 }

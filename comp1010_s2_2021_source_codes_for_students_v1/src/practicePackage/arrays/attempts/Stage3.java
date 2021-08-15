@@ -14,9 +14,18 @@ public class Stage3 {
 	 * NOTE 2: inc can be negative too :)
 	 */
 	public int[] generatePatternedArray(int n, int init, int inc) {
-		return new int[0]; //to be completed
-	}
+		if (n < 0) {
+			return null;
+		}
+		
+		int[] Patterned = new int[n];
+		
+		for(int i=0; i<n; i++) {
+			Patterned[i]= init + (inc * i);
+		}
+		return Patterned;
 
+	}
 	/**
 	 * 
 	 * @param data
@@ -24,8 +33,20 @@ public class Stage3 {
 	 * 
 	 */
 	public int countUniqueItems(int[] data) {
-		return 0; //to be completed
+	/*	if(data == null) {
+			return 0;
+		}
+		int count = 0;
+		for(int i=0; i<data.length; i++) {
+			if((data[i]) == 1) {
+				count++;
+			}
+		}
+		return count;
+	} */
+		return 0;
 	}
+
 
 	/**
 	 * 
@@ -36,8 +57,20 @@ public class Stage3 {
 	 * return false if either of array passed is null
 	 */
 	public boolean identical(int[] a, int[] b) {
-		return false; //to be completed
-	}
+		if (a == null || b == null) {
+			return false;
+		}
+		if(a.length != b.length) {
+			return false;
+		}	
+		for(int i=0; i<a.length; i++) {
+				if(a[i] != b[i]) {
+					return false;
+				}
+			}
+		return true;
+
+			}
 
 	/**
 	 * 
@@ -48,9 +81,18 @@ public class Stage3 {
 	 * return false if either of array passed is null
 	 */
 	public boolean contains(int[] a, int[] b) {
-		return false; //to be completed
-	}
+		if (a == null || b == null) {
+			return false;
+		}
+		
+		for(int i=0; i<a.length; i++) {
+				if(b[i] == a[i]) {
+					return true;
+				}
+			}
+		return false;
 
+			}
 	/**
 	 * 
 	 * @param a
@@ -71,8 +113,21 @@ public class Stage3 {
 	 * return null if either of the array passed is null
 	 */
 	public boolean mutuallyReverse(int[] a, int[] b) {
-		return false; //to be completed
-	}
+		if (a == null || b == null) {
+			return false;
+		}
+		if(a.length != b.length) {
+			return false;
+		}	
+		for(int i=0; i<a.length; i++) {
+				if(a[i] != b[b.length-1-i]) {
+					return false;
+				}
+			}
+		return true;
+
+			}
+
 
 	/**
 	 * 
@@ -93,7 +148,16 @@ public class Stage3 {
 	 * return null if n is less than 0
 	 */
 	public int[] generate(int n) {
-		return new int[0]; //to be completed
+		if(n < 0) {
+			return null;
+		}
+
+		int[] generate = new int[n];
+		for(int i=0; i<n; i++) {
+			generate[i]=i+1;
+		}
+		return generate;
+		
 	}
 
 	/**
@@ -104,7 +168,20 @@ public class Stage3 {
 	 * return empty array if array passed is empty
 	 */
 	public int[] getReverse(int[] data) {
-		return new int[0]; //to be completed
+		if(data == null) {
+			return null;
+		}
+		
+		if(data.length == 0) {
+		int[] empty = {};
+		return empty;
+		}
+		
+		int[] reverse = new int[data.length];
+		for(int i=0; i<data.length; i++) {
+		reverse[i] = data[data.length-1-i];
+		}
+		return reverse;
 	}
 
 	/**
@@ -315,9 +392,18 @@ public class Stage3 {
 	 * return 0 if data is null or empty
 	 */
 	public int totalNumberOfItems(int[][] data) {
-		return 0; //to be completed
+		if(data == null || data.length == 0) {
+			return 0;
+		}
+		int total = 0;
+		for(int i=0; i<data.length; i++) {
+			if(data[i] != null) {
+				for(int j=0; j<data[i].length; j++)
+					total++;
+			}
+		}
+		return total;
 	}
-
 	/**
 	 * 
 	 * @param data: an array of arrays

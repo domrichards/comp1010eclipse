@@ -1,6 +1,6 @@
-//NAME
-//STUDENT ID
-//[] I declare that I haven't seen another person's code, and the submission is entirely your work.
+//NAME Dominic Richards
+//STUDENT ID 45445532
+//[x] I declare that I haven't seen another person's code, and the submission is entirely your work.
 //(put an x inside the square brackets to provide declaration)
 
 //Example:
@@ -32,7 +32,21 @@ public class MagicSquareLogic {
 	 * our tests have a check for that. if the test passes, you are ok. 
 	 */
 	public MagicSquareLogic(int size) {
+		if( size < 3) {
+			size = 3;
+		}
+		if( size > 7) {
+			size = 7;
+		}
+		n = size;
+		data = new int[size][size];
+		for(int i = 0; i<data.length; i++) {
+			for(int j = 0; j<data.length; j++) {
+				data[i][j] = i*9 + j + 1;
+			}
+		}
 	}
+	
 
 	/**
 	 * 

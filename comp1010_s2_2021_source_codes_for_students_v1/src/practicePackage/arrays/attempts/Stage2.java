@@ -616,8 +616,20 @@ public class Stage2 {
 	 * return 0 if array is null.
 	 */
 	public int sumUptoIndex(int[] data, int endIndex) {
-		return 0; //to be completed
-	} 
+		if(data==null) {
+            return 0;
+        } 
+		if(endIndex>0 || endIndex<=data.length) {
+            return 0;
+        }
+		
+		int sum = 0;
+		for(int i=endIndex; i<data.length; i++) {
+			sum+=data[i]; 
+		}
+		return sum;
+	}
+	
 
 	/**
 	 * 

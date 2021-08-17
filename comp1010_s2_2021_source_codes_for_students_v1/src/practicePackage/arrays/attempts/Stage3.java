@@ -81,18 +81,8 @@ public class Stage3 {
 	 * return false if either of array passed is null
 	 */
 	public boolean contains(int[] a, int[] b) {
-		if (a == null || b == null) {
-			return false;
-		}
-		
-		for(int i=0; i<a.length; i++) {
-				if(b[i] == a[i]) {
-					return true;
-				}
-			}
 		return false;
-
-			}
+	}
 	/**
 	 * 
 	 * @param a
